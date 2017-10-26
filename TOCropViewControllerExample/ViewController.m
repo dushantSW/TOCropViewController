@@ -40,6 +40,11 @@
 {
     TOCropViewController *cropController = [[TOCropViewController alloc] initWithCroppingStyle:self.croppingStyle image:image];
     cropController.delegate = self;
+    cropController.customAspectRatio = (CGSize){3.0, 4.0};
+    cropController.aspectRatioLockEnabled = YES;
+    cropController.rotateClockwiseButtonHidden = YES;
+    cropController.rotateButtonsHidden = YES;
+    cropController.aspectRatioPickerButtonHidden = YES;
 
     // Uncomment this if you wish to provide extra instructions via a title label
     //cropController.title = @"Crop Image";
